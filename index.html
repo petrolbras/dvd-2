@@ -16,14 +16,41 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         canvas {
             border: 6px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .botaodiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+        .botao {
+            width: 400px;
+            padding: 30px;
+            font-size: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 30px;
+        }
+        .botao:hover {
+            color:white;
+            background-color: black;
         }
     </style>
 </head>
 <body>
-    <canvas id="mycanvas" width="1200" height="900"></canvas>
+    <div class="main">
+        <div class="botaodiv">
+            <input type="button" value="Adicionar bolinhas" class="botao" onclick="criarbolinhas()">
+        </div>
+        <canvas id="mycanvas" width="1200" height="900"></canvas>
+    </div>
 
     <script src="index.js"></script>
 </body>

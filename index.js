@@ -1,6 +1,8 @@
+// Declara variáveis do canvas
 const canvas = document.getElementById("mycanvas");
 const ctx = canvas.getContext("2d");
 
+// Variáveis
 let assets = [
 	"assets/alvorada.png",
 	"assets/bravo.png",
@@ -15,6 +17,7 @@ let tamanhoy = 900;
 let tamanhoicone = 150;
 criarbolinhas();
 
+// Função para inserir bolinhas
 function criarbolinhas() {
 	let img = new Image();
 	setImage(img);
@@ -30,6 +33,7 @@ function criarbolinhas() {
 	bolinhas.push({ x, y, velx, vely, img });
 }
 
+// Função para mudar as imagens a cada toque na borda
 function setImage(img) {
 	let probabilidade = Math.floor(Math.random() * assets.length);
 	if (img.src.includes(assets[probabilidade])) {
@@ -38,6 +42,7 @@ function setImage(img) {
 	img.src = assets[probabilidade];
 }
 
+// Intervalo de criação/movimentação das bolinhas
 setInterval(() => {
 	ctx.fillStyle = "white";
 	ctx.fillRect(0, 0, tamanhox, tamanhoy);

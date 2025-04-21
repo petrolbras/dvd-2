@@ -60,17 +60,23 @@
 <body>
     
     <div class="main">
+
             <div class="botaodiv">
-                <input type="button" value="Adicionar bolinhas" class="botao" onclick="criarbolinhas()">
+                <input type="button" value="Adicionar bolinhas" class="botao" onclick="criarbolinha()">
             </div>
+
             <div class="botaodiv">
-                <input type="button" value="Remover bolinhas" class="botao" onclick="removerbolinhas()">
+                <input type="button" value="Remover bolinhas" class="botao" onclick="removerbolinha()">
             </div>
+
             <div class="botaodiv">
                 <input type="button" value="Remover todas bolinhas" class="botao" id="removertodas" onclick="removertodas()">
             </div>
-        <div id="contador" onload="contador()"></div>
-        <canvas id="mycanvas" width="1200" height="900"></canvas>
+
+        <div id="contador" onload="atualizarcontador()"></div>
+
+        <canvas id="mycanvas" width="1200" height="900" onclick="criarbolinha()"></canvas>
+
     </div>
 
 

@@ -17,8 +17,8 @@ let tamanhoy = 900;
 let tamanhoicone = 150;
 let contadortexto = 0
 
-// Função para inserir bolinhas
-function criarbolinhas() {
+// Função para inserir bolinha
+function criarbolinha() {
 	let img = new Image();
 	setImage(img);
 
@@ -32,29 +32,29 @@ function criarbolinhas() {
 	let y = Math.random() * (tamanhoy - tamanhoicone);
 	bolinhas.push({ x, y, velx, vely, img });
 
-	contador()
+	atualizarcontador()
 }
 
-// Função para remover bolinhas
-function removerbolinhas() {
+// Função para remover uma bolinha
+function removerbolinha() {
 	bolinhas.pop()
 
-	contador()
+	atualizarcontador()
 }
 
 // Função para remover todas as bolinhas
 function removertodas() {
 	bolinhas = []
-	
-	contador()
+
+	atualizarcontador()
 }
 
 // Função para contar a quantidade de bolinhas
-function contador(){
+function atualizarcontador(){
 	document.getElementById('contador').innerHTML = `A quantidade de bolinhas é ${bolinhas.length}`
 }
 
-contador()
+atualizarcontador()
 
 // Função para mudar as imagens a cada toque na borda
 function setImage(img) {
